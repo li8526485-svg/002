@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #FFFDF5;
+  --color-brand-tomato: #FF4D4D;
+  --color-brand-leaf: #2ECC71;
+  --color-brand-yellow: #FFC107;
+  --color-brand-dark: #222222;
+  --font-sans: 'Noto Sans SC', ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  @apply bg-brand-bg text-brand-dark font-sans selection:bg-brand-tomato selection:text-white;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for category items */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Bento Grid Classes */
+.bento-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  border-radius: 24px;
+  padding: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+  border: 2px solid #222;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.card-tomato {
+  background-color: #FF4D4D;
+  color: white;
+  border: none;
+}
+
+.card-leaf {
+  background-color: #2ECC71;
+  color: white;
+  border: none;
+}
+
+.card-cream {
+  background-color: #FFFFFF;
+  border: 2px solid #222;
+}
+
+.card-yellow {
+  background-color: #FFC107;
+  border: none;
+}
+
+.team-card {
+  background-color: #FFFFFF;
+  border: 2px solid #222;
+  padding: 16px;
+  align-items: center;
+  text-align: center;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #EEE;
+  margin-bottom: 12px;
+  border: 2px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
+  overflow: hidden;
+}
+
+.label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
